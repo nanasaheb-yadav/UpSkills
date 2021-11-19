@@ -1,0 +1,6 @@
+USERNAME = ""
+PASSWORD = ""
+ACCOUNT = ""
+WAREHOUSE = ""
+SCHEMA = ""
+TABLES = ""
