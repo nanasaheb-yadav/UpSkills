@@ -20,7 +20,7 @@ class TeradataConnection:
         :return: connection object: connection
         """
         try:
-            conn = td.connect(host, username, password)
+            conn = td.connect(host=host, user=username, password=password)
             return conn
         except Exception as err:
             print(f"Error connecting to Teradata {err}")
