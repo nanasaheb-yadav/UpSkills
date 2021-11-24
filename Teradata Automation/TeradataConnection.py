@@ -1,4 +1,7 @@
+import pandas as pd
+
 try:
+    import pandas
     import teradatasql as td
     from Config import SERVER, USERNAME, PASSWORD
 except ImportError as err:
@@ -25,3 +28,20 @@ class TeradataConnection:
         except Exception as err:
             print(f"Error connecting to Teradata {err}")
             exit(1)
+
+
+    def run_query(self, conn, query):
+
+        """
+        run td sql query
+        :param conn:
+        :param query:
+        :return:
+        """
+        try:
+           df = pd.read_sql(query, conn)
+           return df
+        except Exception as err:
+            return err
+
+
