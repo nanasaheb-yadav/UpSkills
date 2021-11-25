@@ -29,7 +29,6 @@ class TeradataConnection:
             print(f"Error connecting to Teradata {err}")
             exit(1)
 
-
     def run_query(self, conn, query):
 
         """
@@ -39,9 +38,7 @@ class TeradataConnection:
         :return:
         """
         try:
-           df = pd.read_sql(query, conn)
-           return df
+            df = pd.read_sql(query, conn)
+            return df
         except Exception as err:
             return err
-
-
